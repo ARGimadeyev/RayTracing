@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
+#include "Output.h"
 
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-
-using namespace __gnu_pbds;
 using namespace std;
 
 using ll = long long;
@@ -11,16 +8,15 @@ using ld = long double;
 
 void solve();
 
-int32_t main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr), cout.tie(nullptr);
-    ll t = 1;
-    cin >> t;
-    while (t--) {
-        solve();
+int main() {
+    const int N = 1024, M = 1024;
+    vector<vector<Pixel>> Screen(N, vector<Pixel>(M));
+    for (int i = 0; i < N; ++i) {
+        for (int j = 0; j < M; ++j) {
+            Screen[i][j] = {1, 0, 1};
+        }
     }
+    printS(Screen);
+    cout << "compile\n";
 }
 
-void solve() {
-    cout << 1;
-}
