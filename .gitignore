@@ -1,3 +1,4 @@
-/CMakeLists.txt
-/photo.ppm
-/cmake-build-debug/
+CMakeLists.txt
+photo.ppm
+cmake-build-debug/
+.idea
