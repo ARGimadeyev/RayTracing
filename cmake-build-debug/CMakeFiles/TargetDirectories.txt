@@ -1,3 +1,0 @@
-/home/guesswho_a/Projects/RayTracing/cmake-build-debug/CMakeFiles/RayTracing.dir
-/home/guesswho_a/Projects/RayTracing/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/guesswho_a/Projects/RayTracing/cmake-build-debug/CMakeFiles/rebuild_cache.dir

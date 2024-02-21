@@ -1,8 +1,0 @@
-# ninja log v5
-2	688	1708503459765871239	CMakeFiles/RayTracing.dir/geom.cpp.o	311a6bebd5e794a7
-0	164	1708500994546183682	CMakeFiles/RayTracing.dir/Output.cpp.o	ca5cf57879d0d019
-1	566	1708510447112239879	CMakeFiles/RayTracing.dir/main.cpp.o	713711a51545ccd6
-0	11	1708513490489327918	build.ninja	5fd4048da1465b0f
-1	209	1708510388929592450	CMakeFiles/RayTracing.dir/Output/Output.cpp.o	86dbd9c3000c2e36
-1	656	1708510389373582168	CMakeFiles/RayTracing.dir/geom/geom.cpp.o	719890eacd0ebb50
-566	603	1708510447148239040	RayTracing	41423de67a0a60d9
