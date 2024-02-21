@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include "geom.h"
-#include "Output.h"
+#include "geom/geom.h"
+#include "Output/Output.h"
 
 using namespace std;
 
@@ -16,6 +16,7 @@ int main() {
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j < M; ++j) {
             if (inTriangle(t, Point(i, j))) {
+                Screen[i][j] = {1, 0, 0};
             } else {
                 Screen[i][j].r = d(i + j) / (N + M);
                 Screen[i][j].g = d(N - i - 1 + j) / (N + M);
