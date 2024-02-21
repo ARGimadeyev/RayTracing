@@ -1,4 +1,4 @@
 CMakeLists.txt
 photo.ppm
-cmake-build-debug/*
+cmake-build-debug/
 .idea
