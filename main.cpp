@@ -16,7 +16,7 @@ int main() {
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j < M; ++j) {
             if (inTriangle(t, Point(i, j))) {
-                Screen[i][j] = {1, 0, 0};
+                Screen[i][j] = {0, 1, 0};
             } else {
                 Screen[i][j].r = d(i + j) / (N + M);
                 Screen[i][j].g = d(N - i - 1 + j) / (N + M);
@@ -25,6 +25,6 @@ int main() {
         }
     }
     printS(Screen);
-    cout << "111\n";
+    cout << "No Errors\n";
 }
 
