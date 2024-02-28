@@ -3,7 +3,7 @@
 #define RAYTRACING_GEOM_H
 
 #include <bits/stdc++.h>
-
+#include "Output.h"
 
 using namespace std;
 using ld = double;
@@ -21,12 +21,13 @@ public:
 
     ld operator*(Point a) const;
 
-    ld operator%(Point a) const;
+//    ld operator%(Point a) const;
 
     Point operator+(Point a) const;
 
     Point operator-(Point a) const;
 
+    bool operator==(Point a) const;
     Point operator*(ld k) const;
 
     Point norm();
@@ -36,12 +37,15 @@ class Sphere {
 public:
     Point centre;
     ld r;
+    Color col;
 
     Sphere() {}
 
-    Sphere(Point centre, ld r) : centre(centre), r(r) {}
+    Sphere(Point centre, ld r, Color col) : centre(centre), r(r), col(col) {}
 
     shared_ptr<pair<ld, ld>> IntersectRay(const Point Vdir, const Point o = {0, 0, 0});
+
+    bool operator==(Sphere a) const;
 };
 
 #endif //RAYTRACING_GEOM_H

@@ -2,6 +2,10 @@
 
 using namespace std;
 
+Color Color::operator*(double k) const {
+    return {r * k, g * k, b * k};
+}
+
 void printS(vector<vector<Color>> &shot, int color_) {
     ofstream fout("../photo.ppm");
     fout << "P3\n";

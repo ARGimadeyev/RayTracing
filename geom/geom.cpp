@@ -7,9 +7,9 @@ ld Point::operator*(Point a) const {
     return x * a.x + y * a.y + z * a.z;
 }
 
-ld Point::operator%(Point a) const {
-    return x * a.y - y * a.x;
-}
+//ld Point::operator%(Point a) const {
+//    return x * a.y - y * a.x;
+//}
 
 Point Point::operator+(Point a) const {
     return {x + a.x, y + a.y, z + a.z};
@@ -24,11 +24,19 @@ Point Point::operator*(ld k) const {
 }
 
 Point Point::norm() {
-    ld len = (*this) * (*this);
+    ld len = sqrt((*this) * (*this));
     return {x / len, y / len, z / len};
 }
 
+bool Point::operator==(Point a) const {
+    return a.x == x && a.y == y && a.z == z;
+}
 //Sphere
+
+
+bool Sphere::operator==(Sphere a) const {
+    return a.centre == centre && a.r == r;
+}
 
 shared_ptr<pair<ld, ld>> Sphere::IntersectRay(const Point Vdir, const Point o) {
     Point Vco = o - centre;
