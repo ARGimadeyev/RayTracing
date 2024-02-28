@@ -6,51 +6,42 @@
 
 
 using namespace std;
-using ld = long double;
+using ld = double;
 
 const double PI = acos(-1);
 const double EPS = 1e-9;
 
 class Point {
 public:
-    ld x, y;
+    ld x, y, z;
 
     Point() {}
 
-    Point(ld _x, ld _y) : x(_x), y(_y) {}
+    Point(ld _x, ld _y, ld _z) : x(_x), y(_y), z(_z) {}
 
-    ld operator*(Point a) const {
-        return x * a.x + y * a.y;
-    }
+    ld operator*(Point a) const;
 
-    ld operator%(Point a) const {
-        return x * a.y - y * a.x;
-    }
+    ld operator%(Point a) const;
 
-    Point operator+(Point a) const {
-        return Point(x + a.x, y + a.y);
-    }
+    Point operator+(Point a) const;
 
-    Point operator-(Point a) const {
-        return Point(x - a.x, y - a.y);
-    }
+    Point operator-(Point a) const;
 
-    Point operator*(ld k) const {
-        return Point(x * k, y * k);
-    }
+    Point operator*(ld k) const;
+
+    Point norm();
 };
 
-class Triangle {
+class Sphere {
 public:
-    Point a, b, c;
+    Point centre;
+    ld r;
 
-    Triangle() {}
+    Sphere() {}
 
-    Triangle(Point a, Point b, Point c) : a(a), b(b), c(c) {}
+    Sphere(Point centre, ld r) : centre(centre), r(r) {}
+
+    shared_ptr<pair<ld, ld>> IntersectRay(const Point Vdir, const Point o = {0, 0, 0});
 };
-
-bool inAngle(Point a, Point o, Point b, Point p);
-
-bool inTriangle(Triangle &t, Point p);
 
 #endif //RAYTRACING_GEOM_H

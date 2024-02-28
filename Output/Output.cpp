@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void printS(vector<vector<Pixel>> &shot, int color_) {
+void printS(vector<vector<Color>> &shot, int color_) {
     ofstream fout("../photo.ppm");
     fout << "P3\n";
     fout << shot[0].size() << ' ' << shot.size() << '\n';

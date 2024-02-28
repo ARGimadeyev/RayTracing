@@ -7,15 +7,15 @@
 
 using namespace std;
 
-class Pixel {
+class Color {
 public:
     double r = 0, g = 0, b = 0;
 
-    Pixel() {}
+    Color() {}
 
-    Pixel(double r, double g, double b) : r(r), g(g), b(b) {}
+    Color(double r, double g, double b) : r(r), g(g), b(b) {}
 };
 
-void printS(vector<vector<Pixel>> &shot, int color_ = 255);
+void printS(vector<vector<Color>> &shot, int color_ = 255);
 
 #endif //RAYTRACING_OUTPUT_H
