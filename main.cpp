@@ -7,9 +7,8 @@ using namespace std;
 using ll = long long;
 using d = double;
 
-const int N = 1024, M = 1024;
+const int N = 2048, M = 2048;
 const Color BACKGROUND = {0.55, 0.45, 1};
-
 
 vector<vector<Color>> Screen(N, vector<Color>(M, BACKGROUND));
 
@@ -26,7 +25,7 @@ void code() {
     ld mh = 1, mw = 1, md = 1;
 
     Point Camera(0, 0, 0);
-    vector<Point> Suns = {Point(60, 1, 15)};
+    vector<Point> Suns = {Point(60, 1, 15), Point(50, 30, 15)};
 
     vector<Sphere> Balls = {
             Sphere(Point(-9, 1, 50), 10, Color(1, 0, 0)),
@@ -56,8 +55,8 @@ void code() {
                                 }
                             }
                             if (b) {
-                                ld kof = max(0.0, VpTos.norm() * VcTop.norm()) + 0.35;
-                                mx = max(mx, kof);
+                                ld kof = (max(0.0, VpTos.norm() * VcTop.norm())) * d(1) / (Suns.size());
+                                mx += kof;
                             }
                         }
                         Screen[i][j] = ball.col * mx;
