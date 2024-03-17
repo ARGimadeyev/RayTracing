@@ -16,6 +16,8 @@ public:
     Color(double r, double g, double b) : r(r), g(g), b(b) {}
 
     Color operator*(double k) const;
+
+    Color operator+(Color k) const;
 };
 
 void printS(vector<vector<Color>> &shot, int color_ = 255);

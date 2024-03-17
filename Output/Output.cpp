@@ -6,6 +6,10 @@ Color Color::operator*(double k) const {
     return {r * k, g * k, b * k};
 }
 
+Color Color::operator+(Color k) const {
+    return {r + k.r, g + k.g, b + k.b};
+}
+
 void printS(vector<vector<Color>> &shot, int color_) {
     ofstream fout("../photo.ppm");
     fout << "P3\n";
