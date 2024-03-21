@@ -3,7 +3,7 @@
 #define RAYTRACING_GEOM_H
 
 #include <bits/stdc++.h>
-#include "Output.h"
+#include "../Output/Output.h"
 
 using namespace std;
 using ld = double;
